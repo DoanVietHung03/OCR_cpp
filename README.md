@@ -63,7 +63,15 @@ target_include_directories(build_app PRIVATE "C:/Users/ACER/OneDrive/Desktop/OCR
 
 - Đợi CMake tự động generate cấu hình.
 
-- Chọn target build_app.exe và nhấn Build (hoặc F5 để chạy thẳng).
+- Mở terminal và gõ lệnh để cấu hình project:
+
+```cmake
+cmake -S . -B build -DOpenCV_DIR="D:/OpenCV_CUDA/build/install"
+```
+
+*Lưu ý: hãy chỉnh đường dẫn của folder build OpenCV cho CUDA phù hợp trong máy local*
+
+- chạy file .exe trong folder build/Release để thực thi
 
 *Lưu ý: Hệ thống CMake đã được cấu hình tự động sao chép thư mục weights, CCTV và các file DLL (kể cả dll của ONNX Runtime) vào thư mục build cuối cùng để bạn có thể chạy file .exe trực tiếp mà không bị lỗi thiếu thư viện.*
 

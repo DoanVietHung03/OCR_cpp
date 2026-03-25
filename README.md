@@ -71,6 +71,12 @@ cmake -S . -B build -DOpenCV_DIR="D:/OpenCV_CUDA/build/install"
 
 *Lưu ý: hãy chỉnh đường dẫn của folder build OpenCV cho CUDA phù hợp trong máy local*
 
+- Sau đó hãy build bằng:
+
+```cmake
+cmake --build build --config Release
+```
+
 - chạy file .exe trong folder build/Release để thực thi
 
 *Lưu ý: Hệ thống CMake đã được cấu hình tự động sao chép thư mục weights, CCTV và các file DLL (kể cả dll của ONNX Runtime) vào thư mục build cuối cùng để bạn có thể chạy file .exe trực tiếp mà không bị lỗi thiếu thư viện.*
